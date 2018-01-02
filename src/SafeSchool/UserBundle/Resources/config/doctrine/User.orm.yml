@@ -29,19 +29,5 @@ SafeSchool\UserBundle\Entity\User:
             cascade: ['persist']
             orphanRemoval: true
 
-    oneToOne:
-        apprenant:
-            targetEntity: \AppBundle\Entity\Apprenant
-            inversedBy: user
-            joinColumn:
-                name: apprenant_id
-                referencedColumnName: id
-
-        tuteur:
-            targetEntity: \AppBundle\Entity\Tuteur
-            inversedBy: user
-            joinColumn:
-                name: tuteur_id
-                referencedColumnName: id
 
     lifecycleCallbacks: {  }

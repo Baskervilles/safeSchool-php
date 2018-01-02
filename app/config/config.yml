@@ -74,11 +74,8 @@ fos_user:
     db_driver: orm
     firewall_name: main
     user_class: SafeSchool\UserBundle\Entity\User
-<<<<<<< HEAD
-=======
     from_email:
         address:        safeschool.team@gmail.com
         sender_name:    Demo App
->>>>>>> e3cf71c865805064fd6da76c0057bd222032bc35
     template:
         engine: twig

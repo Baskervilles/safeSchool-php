@@ -20,11 +20,7 @@ class AppKernel extends Kernel
             new SafeSchool\UserBundle\SafeSchoolUserBundle(),
             //new API\NotationBundle\APINotationBundle(),
             new API\EtablissementBundle\APIEtablissementBundle(),
-<<<<<<< HEAD
-            new API\NoteBundle\APINoteBundle(),
-=======
             new API\InscriptionBundle\APIInscriptionBundle(),
->>>>>>> e3cf71c865805064fd6da76c0057bd222032bc35
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {

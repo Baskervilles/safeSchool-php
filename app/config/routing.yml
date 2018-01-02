@@ -8,7 +8,7 @@ app:
 
 ss_app:
     resource: "@AppBundle/Resources/config/routing.yml"
-    
+
 #inscription
 api_inscription:
     resource: "@APIInscriptionBundle/Resources/config/routing.yml"
@@ -18,11 +18,6 @@ api_inscription:
 api_etablissement:
     resource: "@APIEtablissementBundle/Resources/config/routing.yml"
     prefix:   /etablissement
-
-#note
-api_note:
-    resource: "@APINoteBundle/Resources/config/routing.yml"
-    prefix:   /note
 
 # FOSUser Bundle resources
 fos_user_security:

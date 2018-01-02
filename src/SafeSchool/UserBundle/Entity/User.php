@@ -27,16 +27,6 @@ class User extends BaseUser
     private $etablissementVotes = null;
 
     /**
-<<<<<<< HEAD
-     * @var \AppBundle\Entity\Apprenant
-     */
-    private $apprenant;
-
-    /**
-     * @var \AppBundle\Entity\Tuteur
-     */
-    private $tuteur;
-=======
      * @var int
      * Apprenant , tuteur or dirigeant id
      */
@@ -46,7 +36,6 @@ class User extends BaseUser
      * @var \AppBundle\Entity\Etablissement
      */
     private $etablissementId;
->>>>>>> e3cf71c865805064fd6da76c0057bd222032bc35
 
     /**
      * Constructor
@@ -198,51 +187,5 @@ class User extends BaseUser
         return $this->ownerId;
     }
 
-    /**
-     * Set apprenant
-     *
-     * @param \AppBundle\Entity\Apprenant $apprenant
-     *
-     * @return User
-     */
-    public function setApprenant(\AppBundle\Entity\Apprenant $apprenant = null)
-    {
-        $this->apprenant = $apprenant;
 
-        return $this;
-    }
-
-    /**
-     * Get apprenant
-     *
-     * @return \AppBundle\Entity\Apprenant
-     */
-    public function getApprenant()
-    {
-        return $this->apprenant;
-    }
-
-    /**
-     * Set tuteur
-     *
-     * @param \AppBundle\Entity\Tuteur $tuteur
-     *
-     * @return User
-     */
-    public function setTuteur(\AppBundle\Entity\Tuteur $tuteur = null)
-    {
-        $this->tuteur = $tuteur;
-
-        return $this;
-    }
-
-    /**
-     * Get tuteur
-     *
-     * @return \AppBundle\Entity\Tuteur
-     */
-    public function getTuteur()
-    {
-        return $this->tuteur;
-    }
 }
