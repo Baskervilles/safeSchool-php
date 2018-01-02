@@ -20,7 +20,7 @@ class AppKernel extends Kernel
             new SafeSchool\UserBundle\SafeSchoolUserBundle(),
             //new API\NotationBundle\APINotationBundle(),
             new API\EtablissementBundle\APIEtablissementBundle(),
-          //  new API\NoteBundle\APINoteBundle(),
+            new API\NoteBundle\APINoteBundle(),
             new API\InscriptionBundle\APIInscriptionBundle(),
         );
 

@@ -20,9 +20,9 @@ api_etablissement:
     prefix:   /etablissement
 
 #note
-# api_note:
-#     resource: "@APINoteBundle/Resources/config/routing.yml"
-#     prefix:   /note
+api_note:
+    resource: "@APINoteBundle/Resources/config/routing.yml"
+    prefix:   /note
 
 # FOSUser Bundle resources
 fos_user_security:

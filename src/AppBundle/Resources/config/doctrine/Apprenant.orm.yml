@@ -33,16 +33,6 @@ AppBundle\Entity\Apprenant:
             targetEntity: Fichier
             mappedBy: apprenant
             cascade: ['persist']
-
-<<<<<<< HEAD
-    oneToOne:
-          user:
-            targetEntity: \SafeSchool\UserBundle\Entity\User
-            mappedBy: apprenant
-            cascade: ['persist']
-
-=======
->>>>>>> e3cf71c865805064fd6da76c0057bd222032bc35
     manyToMany:
          exploits:
             targetEntity: Exploit
