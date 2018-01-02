@@ -27,16 +27,6 @@ class User extends BaseUser
     private $etablissementVotes = null;
 
     /**
-<<<<<<< HEAD
-     * @var \AppBundle\Entity\Apprenant
-     */
-    private $apprenant;
-
-    /**
-     * @var \AppBundle\Entity\Tuteur
-     */
-    private $tuteur;
-=======
      * @var int
      * Apprenant , tuteur or dirigeant id
      */
@@ -46,8 +36,6 @@ class User extends BaseUser
      * @var \AppBundle\Entity\Etablissement
      */
     private $etablissementId;
->>>>>>> e3cf71c865805064fd6da76c0057bd222032bc35
-
     /**
      * Constructor
      *

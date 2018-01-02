@@ -214,7 +214,6 @@ class EtablissementController extends Controller
         ;
     }
 
-<<<<<<< HEAD
 //     public function ajaxFiliereAction(Request $request)
 //     {
 //       $id = $request->get('id');
@@ -332,74 +331,6 @@ class EtablissementController extends Controller
 //
 //       ));
 //     }
-=======
-    public function ajaxFiliereAction(Request $request)
-    {
-      $id = $request->get('id');
-      $em = $this->getDoctrine()->getManager();
-      $filiere = $em->getRepository('AppBundle:Filiere')->findFiliereById($id);
-      $matieres = $em->getRepository('AppBundle:Matiere')->findMatiereByFiliere($id, 1);
-
-      $matieres1 = $em->getRepository('AppBundle:Matiere')->findMatiereByFiliere($id, 1);
-      $matieres2 = $em->getRepository('AppBundle:Matiere')->findMatiereByFiliere($id, 2);
-      $matieres3 = $em->getRepository('AppBundle:Matiere')->findMatiereByFiliere($id, 3);
-
-
-      return new JsonResponse(array('filiere' => $filiere,
-                                    'matieres1' => $matieres1,
-                                    'matieres2' => $matieres2,
-                                    'matieres3' => $matieres3,
-                                    ));
-  }
-
-  public function listeAllActusAction(Request $request)
-  {
-    $em = $this->getDoctrine()->getManager();
-    $etablissements = $em->getRepository('AppBundle:Etablissement')->find(1);
-    $actus = $em->getRepository('AppBundle:Information')->listeAllActus();
-
-    return $this->render('APIEtablissementBundle:etablissement:listeAllActus.html.twig', array(
-          'etablissements' => $etablissements,
-          'actus' => $actus,
-
-    ));
-
-  }
-
-    public function ajaxActuAction(Request $request)
-    {
-      $id = $request->get('id');
-      $em = $this->getDoctrine()->getManager();
-      $actualite = $em->getRepository('AppBundle:Information')->getActuById($id);
-
-      return new JsonResponse($actualite);
-
-    }
-
-    public function ajaxLoadLastActuBgAction()
-    {
-      $em = $this->getDoctrine()->getManager();
-      $last_bg = $em->getRepository('AppBundle:Information')->getLatestActus();
-
-      return new JsonResponse($last_bg);
-
-    }
-
-    public function listeAnnoncesComsAction(Request $request){
-      $em = $this->getDoctrine()->getManager();
-      $etablissements = $em->getRepository('AppBundle:Etablissement')->find(5);
-      $all_annonces_coms = $em->getRepository('AppBundle:Information')->getAnnoncesEtCommuniques();
-
-      return $this->render('APIEtablissementBundle:etablissement:annonces_coms.html.twig', array(
-            'all_annonces_coms' => $all_annonces_coms,
-            'etablissements' => $etablissements,
-
-      ));
-
-    }
-    //6c6671145759
-    //86936d8638d8ceb0077fcf63
->>>>>>> e3cf71c865805064fd6da76c0057bd222032bc35
 
 // juste renvoyer la vue pour la liste des etablissemnts
     public function listOfEtablissementsAction()
