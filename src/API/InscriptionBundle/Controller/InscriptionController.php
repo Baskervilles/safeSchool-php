@@ -375,7 +375,7 @@ private function createCreateForm($entity,$type)
         $tuteur->setProfession($professionTuteur);
         $em->persist($tuteur);
         //$tuteur->setCode($this->generationCodeParentAction($tuteur));
-        $lastTuteur = $em->getRepository('AppBundle:Tuteur')->getLastTuteur();
+        //$lastTuteur = $em->getRepository('AppBundle:Tuteur')->getLastTuteur();
 
         //die(dump($lastTuteur));
 
@@ -410,6 +410,7 @@ private function createCreateForm($entity,$type)
         $apprenant->setLieuNaissance($lieuNaissanceApprenant);
         $apprenant->setTuteur($tuteur);
         $em->persist($apprenant);
+        $em->flush();
         //$apprenant->setCode($this->generationCodeAction($apprenant));
         //$em->persist($userApprenant);
         //
@@ -497,6 +498,7 @@ private function createCreateForm($entity,$type)
         $em->persist($cursusApprenant);
         $em->flush();
         die(dump($codeAp ));
+        die(dump($this->uniqidReal()));
         //die(dump($cursusApprenant));
 
         //requete pour avoir les objets liés aux id respectifs
@@ -544,21 +546,20 @@ private function createCreateForm($entity,$type)
 
     public function createUser($request,$acteur){
         $user = new User;
-
+        $user->setUsername($this->uniqidReal())
+            ->setOwnerId($acteur->getId());
         if($acteur instanceof Apprenant){
-            $user->setUsername($this->uniqidReal())
+            $user
                 ->setEmail($request->get('email'))
-                ->setUserType('apprenant')
-                ->setApprenant($acteur)
+                ->setUserType(User::ACTEUR_APPRENANT)
                 ->setPassword(password_hash($this->generationCodeAction($acteur),PASSWORD_DEFAULT));
 
 
         }
         if($acteur instanceof Tuteur){
-            $user->setUsername($this->uniqidReal())
+            $user
                 ->setEmail($request->get('tuteur_email'))
-                ->setTuteur($acteur)
-                ->setUserType('tuteur')
+                ->setUserType(User::ACTEUR_TUTEUR)
                 ->setPassword(password_hash($this->generationCodeParentAction($acteur),PASSWORD_DEFAULT));
 
                 //->setPassword

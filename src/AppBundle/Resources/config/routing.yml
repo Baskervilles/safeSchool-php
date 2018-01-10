@@ -1,0 +1,8 @@
+page_apprenant:
+    path: /
+    defaults: { _controller: AppBundle:Apprenant:index }
+    methods:  [GET, POST]
+    
+app_etablissementclasseniveau:
+    resource: "@AppBundle/Resources/config/routing/etablissementclasseniveau.yml"
+    prefix:   /etablissementclasseniveau/{id_etablissement}

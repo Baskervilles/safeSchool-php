@@ -10,6 +10,12 @@ use FOS\UserBundle\Entity\User as BaseUser;
  */
 class User extends BaseUser
 {
+
+    const ACTEUR_APPRENANT = 'apprenant';
+    const ACTEUR_TUTEUR = 'tuteur';
+    const ACTEUR_DIRIGEANT = 'dirigeant';
+    //const ACTEUR_APPRENANT = 'apprenant';
+
     /**
      * @var int
      */

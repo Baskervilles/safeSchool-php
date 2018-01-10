@@ -21,6 +21,7 @@ class AppKernel extends Kernel
             //new API\NotationBundle\APINotationBundle(),
             new API\EtablissementBundle\APIEtablissementBundle(),
             new API\InscriptionBundle\APIInscriptionBundle(),
+            new API\ProgrammeBundle\APIProgrammeBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {
