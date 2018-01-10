@@ -1,0 +1,225 @@
+/*** sidebar style ****/
+
+.main-sidebar {
+  background-color: #6D6D6D;
+    margin-top: 20px;
+    position: absolute;
+    left: 0;
+    padding-top: 15px;
+    min-height: 100%;
+    width: 230px;
+    z-index: 810;
+    -webkit-transition: -webkit-transform .3s ease-in-out,width .3s ease-in-out;
+    -moz-transition: -moz-transform .3s ease-in-out,width .3s ease-in-out;
+    -o-transition: -o-transform .3s ease-in-out,width .3s ease-in-out;
+    transition: transform .3s ease-in-out,width .3s ease-in-out;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+}
+
+.sidebar {
+    padding-bottom: 10px;
+}
+
+.main-sidebar .user-panel {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.user-panel {
+    position: relative;
+    width: 230px;
+    margin-left: -15px;
+    margin-top:-15px;
+    padding-right: -25px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    overflow: hidden;
+    background-color: #595959;
+}
+
+.user-panel::before, .user-panel::after {
+    content: " ";
+    display: table;
+}
+
+.user-panel > .image > img {
+    width: 100%;
+    max-width: 45px;
+    height: auto;
+}
+
+.user-panel > .info {
+    color: #fff;
+    padding: 5px 5px 5px 15px;
+    line-height: 1;
+    position: absolute;
+    left: 55px;
+}
+
+.user-panel::after {
+    clear: both;
+}
+
+.sidebar-menu {
+    list-style: none;
+    white-space: nowrap;
+    overflow: hidden;
+    /*margin: 0;*/
+    padding: 0;
+}
+
+.sidebar-menu > li {
+    position: relative;
+   /* margin: 0;
+    padding: 0;*/
+}
+
+.sidebar-menu > li > a {
+    border-left: 3px solid transparent;
+}
+
+.sidebar a {
+    color: #ffffff;
+}
+
+.sidebar-menu li > a {
+    position: relative;
+}
+.sidebar-menu > li > a {
+    padding: 12px 5px 12px 15px;
+    display: block;
+}
+
+.user-panel > .info {
+    line-height: 1;
+}
+
+.user-panel > .info > p {
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.user-panel > .info > span {
+    margin: -20px 0 0 100px;
+}
+
+.user-panel > .info > .glyphicon {
+   top: -20px;
+}
+
+.sidebar-menu > li:hover > a, .sidebar-menu > li:active > a {
+    color: #fff;
+    background: #00aeef;
+    border-left-color: #1e282c;
+}
+
+.sidebar a:hover {
+    text-decoration: none;
+}
+
+.sidebar a:hover, .sidebar a:active, .sidebar a:focus {
+    outline: none;
+    text-decoration: none;
+    color: #72afd2;
+}
+
+.img_circle{
+    border-radius: 50%;
+    width: 100%;
+    max-width: 45px;
+    height: auto;
+
+}
+
+.img{
+    width: 100%;
+    max-width: 45px;
+    height: auto;
+}
+
+.ul-indexe{
+    position: relative; z-index: 5;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-right: none;
+    width: 20.875rem;
+}
+
+.ul2-zindexe{
+    position: absolute; z-index: 1;
+}
+
+
+
+
+
+
+/* The total progress gets shown by event listeners */
+   /*#total-progress {
+     opacity: 0;
+     transition: opacity 0.3s linear;
+   }
+
+   /* Hide the progress bar when finished */
+   /*#previews .file-row.dz-success .progress {
+     opacity: 0;
+     transition: opacity 0.3s linear;
+   }*/
+
+   /* Hide the delete button initially */
+   /*#previews .file-row .delete {
+     display: none;*/
+   }*/
+
+   /* Hide the start and cancel buttons and show the delete button */
+
+   /*#previews .file-row.dz-success .start,
+   #previews .file-row.dz-success .cancel {
+     display: none;
+   }
+   #previews .file-row.dz-success .delete {
+     display: block;
+   }
+
+   #previews{
+       margin-left: 46px;
+   }
+
+   #buttom-dropzone{
+       margin-left: 130px;
+   }
+   #buttom-ouvrir-dropzone{
+       margin-left: 292px;
+       margin-bottom: 34px;
+   }
+
+   #buttom-afficher-dropzone{
+       margin-left: 276px;
+       margin-bottom: 34px;
+   }
+
+   #dropzone-name{
+     margin-left: 10px;
+     width: 276px;
+    overflow-wrap: break-word;
+   }
+
+   #dropzone-size{
+     margin-right: 0px;
+   }
+
+   #dropzone-actions{
+       width: auto;
+   }
+   #dropzone-supprimer{
+     margin-left: 90px;
+ }
+ #div-dropzone{
+     background-color: rgb(241, 246, 248);
+     box-shadow: 16px 0px 8.5px 1px rgba(0,0,0,0.4);
+     min-height: 250px;
+     margin-left: -50px;
+ }*/

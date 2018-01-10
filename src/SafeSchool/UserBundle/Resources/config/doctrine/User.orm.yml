@@ -28,6 +28,4 @@ SafeSchool\UserBundle\Entity\User:
             mappedBy: user
             cascade: ['persist']
             orphanRemoval: true
-
-
     lifecycleCallbacks: {  }

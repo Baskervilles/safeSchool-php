@@ -10,4 +10,37 @@ namespace AppBundle\Repository;
  */
 class NoteRepository extends \Doctrine\ORM\EntityRepository
 {
+  function getNotesOfApprenant($ets,$apprenant,$matiere=null){
+    $queryBuilder = $this->_em->createQueryBuilder()
+                         ->select('n','m','ca','ecn','ec')
+                         ->from('AppBundle:Note','n')
+                         ->join('n.apprenantCursus','ca')
+                         ->join('ca.etablissementApprenant','ea')
+                         ->join('ea.etablissement','e')
+                         ->join('ea.apprenant','a')
+                         ->join('n.matiere','m')
+                         ->join('m.etablissementClasseNiveau','ecn')
+                         ->join('ecn.etablissementClasse','ec')
+                         ->where('a =:app')
+                         ->setParameter('app',$apprenant)
+                         ->andWhere('e =:ets')
+                         ->setParameter('ets',$ets);
+                        if ($matiere != null) {
+             $queryBuilder->andWhere('m =:matiere')
+                          ->setParameter('matiere',$matiere)
+                          ->andWhere('n.typeNote !=:moyenne')
+                          ->setParameter('moyenne','moyenne');
+                        }
+                        else {
+             $queryBuilder->andWhere('n.typeNote =:moyenne')
+                          ->setParameter('moyenne','moyenne');
+                        }
+
+            $queryBuilder->orderBy('n.dateNote','DESC')
+                         ;
+
+
+    return $notes = $queryBuilder->getQuery()
+                                 ->getResult();
+  }
 }

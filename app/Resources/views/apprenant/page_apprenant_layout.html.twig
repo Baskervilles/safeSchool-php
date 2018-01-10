@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+		<link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+		<link rel="stylesheet" type="text/css" href="{{ asset('bootstrap/css/bootstrap.min.css') }}" />
+
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style_apprenants.css') }}"/>
+
+    </head>
+
+    <body>
+        <div class="container-fluid display-table">
+            <div class="row display-table-row">
+                <div class="col-md-2 display-table-cell valigne-top" id="side-menu">
+                    <h1>trezazedg</h1>
+                    <ul>
+                        <li class="link active">
+                            <a href="indexe">
+                                <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                                <span>MON PROFIL</span>
+                            </a>
+                        </li>
+                        <li class="link ">
+                            <a href="indexe">
+                                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                                <span>Publier un Exploit</span>
+                            </a>
+                        </li>
+                        <li class="link">
+                            <a href="indexe">
+                                <span class="glyphicon glyphicon" aria-hidden="true"></span>
+                                <span>Voir tous les exploitsL</span>
+                            </a>
+                        </li>
+                        <li class="link">
+                            <a href="tag">
+                                <span class="glyphicon glyphicon-tag" aria-hidden="true"></span>
+                                <span>NOTES & BULLETINS</span>
+                            </a>
+                        </li>
+                        <li class="link">
+                            <a href="setting">
+                                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                                <span>PROGRAMME DE COURS</span>
+                            </a>
+                        </li>
+                        <li class="link">
+                            <a href="#collapse-post " data-toggle ="collapse" aria-controls="collapse-post">
+                                <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                                <span>mediatheque</span>
+                                <span class="label label-success pull-right">5</span>
+                            </a>
+                            <ul class="collapse collapseable" id="collapse-post">
+                                <li><a href="new doc">commune <span class="label label-success pull-right">5</span></a></li>
+                                <li><a href="new doc">personnelle <span class="label label-warning pull-right">5</span></a></li>
+
+                            </ul>
+                        </li>
+                        <li class="link">
+                            <a href="setting">
+                                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                                <span>ANNONCES & COMMUNIQUES</span>
+                            </a>
+                        </li>
+                        <li class="link">
+                            <a href="setting">
+                                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                                <span>Seting</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col-md-10 display-table-cell valigne-top ">
+                    <div class="row">
+                        <header id="nav-header" class="clearfix">
+                            <div class="col-md-5 ">
+                                <nav class="navbar-default pull-left">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="offcanvas" data-target="#side-menu">
+                                       <span class="sr-only"> Toggle Navigation</span>
+                                       <span class="icon-bar"></span>
+                                       <span class="icon-bar"></span>
+                                       <span class="icon-bar"></span>
+                                    </button>
+                                </nav>
+                                <input type="text" placeholder="searche sommething hear" id="header-searche-field"name="" value="">
+                            </div>
+                            <div class="col-md-7 box2">
+                                <ul class="pull-right ">
+                                    <li id="welcome"> welcom to your page</li>
+                                    <li class=" fixed-width ">
+                                        <a href="#">
+                                            <span class="glyphicon glyphicon-bell" aria-hidden="true"></span>
+                                            <span class="label label-warning " >3</span>
+                                        </a>
+                                    </li>
+                                    <li class="fixed-width ">
+                                        <a href="#" class="dropdown-toggle">
+                                            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                                            <span class="label label-message" >3</span>
+                                        </a>
+                                    </li>
+                                    <li class="fixed-width">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                          <i class="fa fa-flag-o"></i>
+                                          <span class="label label-danger">9</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                      <img src="{{asset('assets/img/DSC_9100.JPG')}}" class="user-image" alt="User Image">
+                                      <span class="hidden-xs">Alexander Pierce</span>
+                                    </a>
+                                </ul>
+                            </div>
+                        </header>
+                    </div>
+                    <div class="row">
+                        <footer class="clearfix" id="admin-footer" >
+                            <div class="pull-left">
+                                <b>Copyright  </b>
+                                &copy; safeSchool 2018
+                            </div>
+                            <div class="pull-right">
+
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="{{ asset('assets/js/jquery-3.1.0.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
+        {% block javascripts %}
+        <script type="text/javascript" src="{{ asset('assets/js/page_apprenant.js') }}"></script>
+        {% endblock %}
+
+    </body>
+</html>

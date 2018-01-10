@@ -215,6 +215,40 @@ class EtablissementController extends Controller
     }
 
 
+
+
+//     public function ajaxFiliereAction(Request $request)
+//     {
+//       $id = $request->get('id');
+//       $em = $this->getDoctrine()->getManager();
+//       $filiere = $em->getRepository('AppBundle:Filiere')->findFiliereById($id);
+//       $matieres = $em->getRepository('AppBundle:Matiere')->findMatiereByFiliere($id, 1);
+//
+//       $matieres1 = $em->getRepository('AppBundle:Matiere')->findMatiereByFiliere($id, 1);
+//       $matieres2 = $em->getRepository('AppBundle:Matiere')->findMatiereByFiliere($id, 2);
+//       $matieres3 = $em->getRepository('AppBundle:Matiere')->findMatiereByFiliere($id, 3);
+//
+//
+//       return new JsonResponse(array('filiere' => $filiere,
+//                                     'matieres1' => $matieres1,
+//                                     'matieres2' => $matieres2,
+//                                     'matieres3' => $matieres3,
+//                                     ));
+//   }
+//
+//   public function listeAllActusAction(Request $request)
+//   {
+//     $em = $this->getDoctrine()->getManager();
+//     $etablissements = $em->getRepository('AppBundle:Etablissement')->find(1);
+//     $actus = $em->getRepository('AppBundle:Information')->listeAllActus();
+//
+//     return $this->render('APIEtablissementBundle:etablissement:listeAllActus.html.twig', array(
+//           'etablissements' => $etablissements,
+//           'actus' => $actus,
+//
+//     ));
+//
+//   }
 //
 //     public function ajaxActuAction(Request $request)
 //     {
@@ -364,7 +398,6 @@ class EtablissementController extends Controller
       ));
 
     }
-
 
 // juste renvoyer la vue pour la liste des etablissemnts
     public function listOfEtablissementsAction()

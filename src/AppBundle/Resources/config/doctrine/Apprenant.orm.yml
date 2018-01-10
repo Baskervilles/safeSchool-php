@@ -33,7 +33,6 @@ AppBundle\Entity\Apprenant:
             targetEntity: Fichier
             mappedBy: apprenant
             cascade: ['persist']
-
     manyToMany:
          exploits:
             targetEntity: Exploit

@@ -1,0 +1,24 @@
+etablissementclasseniveau_index:
+    path:     /
+    defaults: { _controller: "AppBundle:EtablissementClasseNiveau:index" }
+    methods:  GET
+
+etablissementclasseniveau_show:
+    path:     /{id}/show
+    defaults: { _controller: "AppBundle:EtablissementClasseNiveau:show" }
+    methods:  GET
+
+etablissementclasseniveau_new:
+    path:     /new
+    defaults: { _controller: "AppBundle:EtablissementClasseNiveau:new" }
+    methods:  [GET, POST]
+
+etablissementclasseniveau_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AppBundle:EtablissementClasseNiveau:edit" }
+    methods:  [GET, POST]
+
+etablissementclasseniveau_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AppBundle:EtablissementClasseNiveau:delete" }
+    methods:  DELETE

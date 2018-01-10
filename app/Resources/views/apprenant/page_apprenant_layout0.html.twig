@@ -1,0 +1,93 @@
+
+{#{% extends '::general_layout.html.twig' %}#}
+
+{% block  stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style_apprenant.css') }}"/>
+    {% block stylesheets_apprenant %}
+
+    {% endblock %}
+{% endblock %}
+
+
+{% block  body %}
+<div class="row">
+
+
+        <aside class="col-md-2 main-sidebar">
+            <section class="sidebar" style="height: auto">
+                <div class="user-panel">
+        <div class="dropdown">
+
+           <a href="#" class="dropdown-toggle" type="" id="menu1" data-toggle="dropdown"><img data-name="Cteve" class="profile img_circle"/>
+               <div class="pull-left info">
+                  <span> </span>&nbsp;&nbsp;
+                   <span class="glyphicon glyphicon-chevron-down"></span>
+              </div>
+            </a>
+          <span class="caret"></span></a>
+           <!--<ul class="dropdown-menu ul-indexe" role="menu" aria-labelledby="menu1">
+              <li> <img class="img-circle img" src="{{ asset('assets/img/avatar.png') }}" alt=""> <span>jojo</span></li>
+             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Profile & account</a></li>
+             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Prefernces</a></li>
+             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Help and feedback</a></li>
+             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">set your selIf to away</a></li>
+             <li role="presentation" class="divider"></li>
+             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Invite Peaople</a></li>
+               <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Tous ce que tu veux mon porte</a></li>
+           </ul>-->
+           </div>
+         </div>
+
+        <ul class="sidebar-menu ul2-zindexe">
+            <li><a href="#">MON PROFIL</a></li>
+            <li><a href="{#{{path('exploit_new')}}#}">Publier un Exploit</a></li>
+            <li><a href="{#{{path('exploit_index')}}#}">Voir tous les Exploit</a></li>
+            <li><a href="#">NOTES & BULLETINS</a></li>
+            <li><a href="#">PROGRAMME DE COURS</a></li>
+            <li><a href="#">MEDIATHEQUE PERSONNELLE</a></li>
+            <li><a href="#">MEDIATHEQUE COMMUNE</a></li>
+            <li><a href="#">JOINDRE UNE PHOTO</a></li>
+            <li><a href="#">ALERTES</a></li>
+            <li><a href="#">EMPLOI DU TEMPS</a></li>
+            <li class="divider"></li>
+            <li><a href="#">TRAVAIL COLLABORATIF</a></li>
+            <li><a href="#">CHAT</a></li>
+            <li class="divider"></li>
+            <li><a href="#">ANNONCES & COMMUNIQUES</a></li>
+
+        </ul>
+            </section>
+        </aside>
+
+</div>
+
+<!-- <div class="pull-left image">
+      <img data-name="Cteve" class="profile img_circle"/>
+     <img class="img-circle" src="{#{{ asset('assets/img/avatar.png') }}#}" alt="">
+ </div>-->
+
+ <!--<div class="pull-left info">
+     <p> Claudio Capeo</p>&nbsp;&nbsp;
+     <span class="glyphicon glyphicon-chevron-down"></span>
+ </div>-->
+
+
+{% endblock %}
+
+
+ {% block javascripts %}
+     {% block javascripts_apprenant %}
+     <script src="{{ asset('assets/js/initial.min.js') }}"></script>
+     <script src="{{ asset('assets/js/dropzone.js') }}"></script>
+     <script src="{{ asset('assets/js/upload_dropzone.js') }}"></script>
+     <script type="text/javascript">
+         $('.profile').initial();
+     </script>
+     <script>
+$(document).ready(function(){
+    $(".dropdown-toggle").dropdown();
+});
+</script>
+     {% endblock %}
+ {% endblock %}

@@ -3,7 +3,10 @@
 security:
     encoders:
         FOS\UserBundle\Model\UserInterface: bcrypt
+<<<<<<< HEAD
 
+=======
+>>>>>>> acc14a0d11741606cefc8e539764ff5878964e53
     role_hierarchy:
         ROLE_ADMIN:       ROLE_USER
         ROLE_SUPER_ADMIN: ROLE_ADMIN
@@ -28,6 +31,17 @@ security:
         - { path: ^/admin/, role: ROLE_ADMIN }
 
     # http://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers
+<<<<<<< HEAD
+=======
+    providers:
+        fos_userbundle:
+            id: fos_user.user_provider.username_email
+        in_memory:
+            memory:
+                users:
+                    user:  { password: userpass, roles: [ 'ROLE_USER' ] }
+                    admin: { password: adminpass, roles: [ 'ROLE_ADMIN' ] }
+>>>>>>> acc14a0d11741606cefc8e539764ff5878964e53
 
     firewalls:
         main:
@@ -61,5 +75,9 @@ security:
             # activate different ways to authenticate
             # http_basic: ~
             # http://symfony.com/doc/current/book/security.html#a-configuring-how-your-users-will-authenticate
+<<<<<<< HEAD
 
+=======
+            # form_login: ~
+>>>>>>> acc14a0d11741606cefc8e539764ff5878964e53
             # http://symfony.com/doc/current/cookbook/security/form_login_setup.html
